@@ -8,12 +8,22 @@ public class Main {
                 "комітів, формування повідомлень комітів, гілкування, створення та видалення pull request.");
 
         Scanner scanner = new Scanner(System.in);
-        double Fahrenheit = scanner.nextDouble();
-        double Celsius = convertFahrenheitToCelsius(Fahrenheit);
-        System.out.println(Celsius);
+
+        int a = scanner.nextInt();
+        if (a == 1) {
+            double FahrenheitToCelsius = scanner.nextDouble();
+            System.out.println(ConvertFahrenheitToCelsius(FahrenheitToCelsius));
+        } else {
+            double CelsiusToFahrenheit = scanner.nextDouble();
+            System.out.println(ConvertCelsiusToFahrenheit(CelsiusToFahrenheit));
+        }
     }
 
-    private static double convertFahrenheitToCelsius(double Fahrenheit) {
-        return (Fahrenheit - 32.0) * 5.0 / 9;
+    private static double ConvertFahrenheitToCelsius(double FahrenheitToCelsius) {
+        return (FahrenheitToCelsius - 32.0) * 5.0 / 9;
+    }
+
+    private static double ConvertCelsiusToFahrenheit(double CelsiusToFahrenheit) {
+        return 9 / 5.0 * CelsiusToFahrenheit + 32;
     }
 }
